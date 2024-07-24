@@ -1,52 +1,79 @@
+/* Container for the form to center it on the page */
 form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  /* Header style for the form */
   h2 {
     text-align: center;
-    color: #333;
+    color: #343a40;
+    margin-bottom: 20px;
   }
   
+  /* Style for form labels */
   label {
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #555555;
     font-size: 14px;
   }
   
+  /* Style for input fields */
+  input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus state for input fields */
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* General button style */
   button {
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
+  /* Style for the submit button */
   button[type="submit"] {
     background-color: #007bff;
     color: white;
     margin-bottom: 10px;
   }
   
+  /* Hover state for the submit button */
   button[type="submit"]:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
   }
   
+  /* Style for the register button */
   button[type="button"] {
     background-color: #6c757d;
     color: white;
   }
   
+  /* Hover state for the register button */
   button[type="button"]:hover {
     background-color: #5a6268;
+    transform: scale(1.05);
   }
   
