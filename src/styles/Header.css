@@ -1,57 +1,49 @@
+/* Header.css */
+
 .App-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #343a40;
-    color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .App-header h2 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .header-actions {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header-actions button {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .header-actions button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-  }
-  
-  .cart-icon {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    margin-left: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .cart-icon:hover {
-    transform: scale(1.2);
-  }
-  
-  .App-header:hover {
-    background-color: #495057;
-    color: #f8f9fa;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.head{
+  color:white;
+}
+
+.App-header h2 {
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-actions button:hover {
+  background-color: #0056b3;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}

@@ -6,7 +6,6 @@ function Cart({ currentUser, onViewChange }) {
 
   useEffect(() => {
     const userCart = JSON.parse(localStorage.getItem(`${currentUser}_cart`)) || [];
-    // Ensure each item has a quantity property
     const updatedCart = userCart.map(item => ({
       ...item,
       quantity: item.quantity || 1
@@ -38,9 +37,10 @@ function Cart({ currentUser, onViewChange }) {
     updateCart(newCart);
   };
 
-  const payment=()=>{
-    alert("Proceed for payment.....");
-  }
+  const handleCheckout = () => {
+    alert("Proceeding to payment...");
+    updateCart([]);
+  };
 
   const calculateTotal = () => {
     return cartItems
@@ -74,11 +74,10 @@ function Cart({ currentUser, onViewChange }) {
           </ul>
           <div className="cart-total">
             <h3>Total: ${calculateTotal()}</h3>
-            <button className="checkout-button" onClick={payment}>Checkout</button>
+            <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
           </div>
         </div>
       )}
-      <button onClick={() => onViewChange('home')}>Back to Home</button>
     </div>
   );
 }
