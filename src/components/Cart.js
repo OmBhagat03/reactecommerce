@@ -3,6 +3,7 @@ import '../styles/Cart.css';
 
 function Cart({ currentUser, onViewChange }) {
   const [cartItems, setCartItems] = useState([]);
+  const [notification, setNotification] = useState('');
 
   useEffect(() => {
     const userCart = JSON.parse(localStorage.getItem(`${currentUser}_cart`)) || [];
@@ -38,8 +39,11 @@ function Cart({ currentUser, onViewChange }) {
   };
 
   const handleCheckout = () => {
-    alert("Proceeding to payment...");
     updateCart([]);
+    setNotification('Thank you for your purchase!');
+    setTimeout(() => {
+      setNotification('');
+    }, 3000); // Notification disappears after 3 seconds
   };
 
   const calculateTotal = () => {
@@ -51,6 +55,7 @@ function Cart({ currentUser, onViewChange }) {
   return (
     <div className="cart-container">
       <h2>{currentUser}'s Cart</h2>
+      {notification && <div className="notification">{notification}</div>}
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (

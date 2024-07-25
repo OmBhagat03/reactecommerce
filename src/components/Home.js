@@ -4,6 +4,7 @@ import '../styles/Home.css';
 function Home({ currentUser }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [notification, setNotification] = useState('');
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -18,11 +19,17 @@ function Home({ currentUser }) {
     const updatedCart = [...cart, product];
     setCart(updatedCart);
     localStorage.setItem(`${currentUser}_cart`, JSON.stringify(updatedCart));
+
+    setNotification(`${product.title} added to cart!`);
+    setTimeout(() => {
+      setNotification('');
+    }, 3000); // Notification disappears after 3 seconds
   };
 
   return (
     <div className="home-container">
       <h2>Welcome to the Store, {currentUser}!</h2>
+      {notification && <div className="notification">{notification}</div>}
       <div className="product-list">
         {products.map(product => (
           <div key={product.id} className="product">
