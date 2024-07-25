@@ -1,18 +1,43 @@
-/* Login.css */
-
 .login-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 2rem;
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 2rem;
 }
 
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.login-container button[type="button"] {
+  background-color: #6c757d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+.login-container button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 .login-container form {
@@ -20,42 +45,21 @@
   flex-direction: column;
 }
 
-.login-container label {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
+.login-container input[type="password"],
+.login-container input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
 }
 
-.login-container button[type="submit"],
-.login-container button[type="button"] {
-  padding: 0.75rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
+.login-container label {
   font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.login-container button[type="submit"]:hover,
-.login-container button[type="button"]:hover {
-  background-color: #0056b3;
-}
-
-.login-container button[type="button"] {
-  background-color: #6c757d;
-}
-
-.login-container button[type="button"]:hover {
-  background-color: #5a6268;
+  margin-bottom: 1rem;
 }

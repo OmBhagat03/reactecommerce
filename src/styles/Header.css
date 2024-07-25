@@ -1,49 +1,47 @@
-/* Header.css */
-
 .App-header {
+  align-items: center;
+  background-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.head{
-  color:white;
 }
 
 .App-header h2 {
   margin: 0;
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.header-actions button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.header-actions button:hover {
-  background-color: #0056b3;
-}
-
 .cart-icon {
-  font-size: 1.5rem;
   cursor: pointer;
+  font-size: 1.5rem;
   transition: transform 0.3s ease;
 }
 
 .cart-icon:hover {
   transform: scale(1.1);
+}
+
+.head {
+  color: white;
+}
+
+.header-actions {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.header-actions button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.header-actions button:hover {
+  background-color: #0056b3;
 }
